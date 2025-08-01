@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout</title>
+    <style>
+.main{
+    height:100vh;
+    width:100%
+}
+    *{
+        padding: 0%;
+        margin:0%
+    }
+        nav{
+            height:10%;
+            width:100%;
+            background-color: turquoise;
+        }
+        section{
+            height:90%;
+            width:100%;
+            display: flex;
+        }
+            .left{
+                width: 30%;
+                background-color: darkblue;
+            }
+            .right{
+                width: 70%;
+                height:100%;
+                display: flex;
+                flex-direction: column;
+            }
+            .part1{
+                height:50%;
+                background-color: green;
+                width:100%
+            }
+            .part2{
+                height:40%;
+                width:100%;
+                display: flex;
+                flex-direction: row;
+            }
+            footer{
+                height:10%;
+                width: 100%;
+                background-color: rgb(6, 6, 33);
+            }
+            .child1{
+                height:100%;
+                width:50%;
+                background-color: yellow;
+            }
+            .child2{
+                height:100%;
+                width:50%;
+                background-color: yellowgreen;
+            }
+
+            @media (max-width: 767px) {
+                
+                nav {
+                    height: 10%;
+                }
+                section {
+                    flex-direction: column;
+                    height: auto;
+                }
+                .left, .right {
+                    width: 100%;
+                    height: auto;
+                }
+                .right {
+                    flex-direction: column;
+                }
+                .part1, .part2, footer {
+                width: 100%;
+                height: auto;
+                }
+                .part2 {
+                flex-direction: column;
+                }
+                .child1, .child2 {
+                    width: 100%;
+                height: 100px;
+                }
+            }
+    </style>
+</head>
+<body class="main">
+    <nav></nav>
+    <section>
+        <div class="left"></div>
+        <div class="right">
+            <div class="part1"></div>
+            <div class="part2">
+                <div class="child1"></div>
+                <div class="child2"></div>
+            </div>
+            <footer></footer>
+        </div>
+    </section>
+    
+</body>
+</html>
